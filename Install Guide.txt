@@ -1,0 +1,46 @@
+Panduan Instalasi Applikasi
+1. download semua file
+2. buka folder instalasi
+3. install semua aplikasi (jika belum punya/bisa menggunakan yang lain)
+
+keterangan :
+a. git 		: terminal (opsional)
+b. composer : penunjang framework laravel
+c. vs-code 	: compiler. bisa juga pakai sublime dll
+d. xampp	: web-server/database
+
+setelah semua diinstall, maka proses selanjutnya adalah konfigurasi projek SIMPI
+1. ekstrak simpi.zip
+2. masuk ke folder xampp (biasanya di drive C: atau disesuaikan dengan hasil insatalasi anda)
+3. masuk folder htdocs
+4. copy folder simpi ke dalam htdocs
+5. setelah itu klik kanan pada ruang bebas (didalam htdocs)
+6. pilih git bash here
+7. masukkan perintah composer create-project --prefer-dist laravel/laravel coba_laravel
+   (guna untuk menginstall vendor awal yang ada pada project laravel, setelah sukses install boleh dihapus)
+8 clear configurasi projek SIMPI
+
+configurasi xampp dan database
+1. buka aplikasi xampp, jalankan module Apache dan MySQL (tekan start pada action)
+2. jika sudah, buka browser. bebas boleh crome firefox atau yang lainya.
+3. ketik http://localhost/phpmyadmin/
+4. jika sudah, di sidebar sebelah kiri atau tombol 'baru'. klik untuk membuat buat data base baru dengan nama simpi (huruf kecil semua)
+5. setelah database sudah dibuat. klik database tersebut. lalu import database yang seblunya sudah dibuat. caranya
+   klik simpi -> pilih import [dibagian menu bar atas] -> lalu pilih file (file ada difolder db(sql) pada folder simpi) -> pilih salah satu lalu tekan kirim atau go yang ada dibagian pojok bawah kanan. jika sudah lakukan lagi untuk import database yang satunya ... [lokasi.sql dan simpi.sql]
+6. jika berhasil maka akan ada notif berhasil tanpa error.
+7. konfigurasi databse sudah selesai
+
+menjalankan aplikasi simpi
+A.  cara pertama : menggunakan compiler
+	1. buka aplikasi vs-code
+	2. pilih file -> open folder -> arahkan ke folder simpi yang ada di htdocs xampp -> lalu open
+	3. jika sudah maka seluruh source akan di load di situ. setelah itu pilih 'new terminal' yang terletak pada menu bar vs-code.
+	4. setelah itu ketik php artisan serve. jika sudah berjalan maka klik link yang ada di terminal atau bisa ketika alamat nya di crome http://localhost:8000/
+
+B.  cara kedua : menggunakan git
+	1. masuk ke folder simpi yang ada di htdocs xampp
+	2. setelah itu klik kanan pada ruang bebas (didalam htdocs) -> pilih git bash here
+	3. ketik php artisan serve
+	4. setelah itu ketik php artisan serve. jika sudah berjalan maka klik link yang ada di terminal atau bisa ketika alamat nya di crome http://localhost:8000/
+
+sssssssss
